@@ -21,10 +21,17 @@ It is important to cover:
 -->
 ```
 
-When working in R, it's already common to have standard conventions around styling of code - packages like lintr, styler, and tools like air and jarl are widely used to ensure that code conforms to agreed standards.  These tools are very convenient to be run automatically, locally or on CI, as part of a standard package development workflow  Documentation doesn't receive as much attention as code. While `R CMD check` verifies that documentation exists and matches usage, there is no common tooling for ensuring that docs are readable by a human - this responsibility falls to the authors and reviewers.
+When working in R, it's already common to have standard conventions around styling of code - packages like lintr, styler, and tools like air and jarl are widely used to ensure that code conforms to agreed standards. 
+These tools are very convenient to be run automatically, locally or on CI, as part of a standard package development workflow. 
+Documentation doesn't receive as much attention as code. 
+While `R CMD check` verifies that documentation exists and matches usage, there is no common tooling for ensuring that docs are readable by a human - this responsibility falls to the authors and reviewers.
 
-As humans reading documentation, complex and confusing documentation increases cognitive load, frustrates users, and can be a real barrier to adoption and understanding.  This problem exists for most users, but can be an increased challenge for newcomers and people for whom English is not their first language.  
+As humans reading documentation, complex and confusing documentation increases cognitive load, frustrates users, and can be a real barrier to adoption and understanding. 
+This problem exists for most users, but can be an increased challenge for newcomers and people for whom English is not their first language. 
 
-R packages are increasingly being written with the help of - or eclusively by - AI tools.  While many AI tools are capable of writing accurate documentation, models vary in their ability to write understandable and helpful documentation.  Without any oversight, it's easy to end up with verbose and jargon-filled documentaiton.
+R packages are increasingly being written with the help of - or exclusively by - AI tools. 
+While many AI tools are capable of writing accurate documentation, models vary in their ability to write understandable and helpful documentation.
+Without any oversight, it's easy to end up with verbose and jargon-filled documentation.
 
-Prior work exists in the form of the docreview package, published briefly on CRAN in 2024 but abandoned due to complexity and lack of maintainer availability.  Packages exist for calculating readbaility scores and checking spellign, but the ecosystem is lacking an opinionated documentation linting package which can be used by both humans and AI tools to write better docs.
+Prior work exists in the form of the docreview package, published briefly on CRAN in 2024 but abandoned due to complexity and lack of maintainer availability. 
+Packages exist for calculating readability scores and checking spelling, but the ecosystem is lacking an opinionated documentation linting package which can be used by both humans and AI tools to write better docs.
