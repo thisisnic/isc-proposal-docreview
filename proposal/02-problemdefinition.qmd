@@ -4,14 +4,14 @@ bibliography: references.bib
 
 # The Problem
 
-When working in R, it's already common to have standard conventions for code style: packages like lintr and styler, and tools like air and jarl are widely used to ensure that code conforms to agreed standards. 
+When working in R, it's already common to have standard conventions for code style: packages like [lintr](https://lintr.r-lib.org/) [@hester2025] and [styler](https://styler.r-lib.org/), and tools like [air](https://posit-dev.github.io/air/) and [jarl](https://jarl.etiennebacher.com/) are widely used to ensure that code conforms to agreed standards. 
 These tools are very convenient and can be run automatically, locally or on CI, as part of a standard package development workflow. 
 Documentation doesn't receive as much attention as code. 
-While `R CMD check` verifies that documentation exists and matches usage, there is no common tooling for ensuring that docs are readable by a human.  This responsibility falls to the authors and reviewers.
+While `R CMD check` verifies that documentation exists and matches usage, there is no common tooling for ensuring that docs are readable by a human. This responsibility falls to the authors and reviewers.
 
-Complex and confusing documentation increases cognitive load, frustrates users, and can be a real barrier to adoption and understanding. 
+Complex and confusing documentation increases cognitive load [@sweller1988], frustrates users, and can be a real barrier to adoption and understanding. 
 This problem affects everyone but can be a bigger challenge for newcomers and people for whom English is not their first language. 
-Better documentation means wider adoption of tools, and faster onboarding of newcomers.
+Better documentation means wider adoption of tools, and faster onboarding of newcomers. This problem is recognised by organisations like rOpenSci, who incorporate documentation checking as part of their software review process [@ropensci2026].
 
 R packages are increasingly being written with the help of, or exclusively by, AI tools. 
 While many AI models are capable of writing accurate documentation, they vary in their ability to write understandable and helpful documentation.
@@ -19,8 +19,8 @@ Without any oversight, it's easy to end up with verbose and jargon-filled docume
 This problem is only going to grow with the increased prevalence of these tools.
 However, with guidance about best practice in writing for humans, in the form of documentation linting, both human and AI authors can produce better docs.
 
-Prior work exists in the form of the docreview package, published on CRAN between 2021 and 2024.  It contained 5 checks, including vignette length and readability scores, but it stalled due to the complexity of its architecture and maintainer availability.
+Prior work exists in the form of the [docreview](https://github.com/thisisnic/docreview) package, published on [CRAN](https://cran.r-project.org/package=docreview) between 2021 and 2024. It contained 5 checks, including vignette length and readability scores, but it stalled due to the complexity of its architecture and maintainer availability.
 
-Other packages exist which cover a subset of the problem.  The spelling package checks words but not prose, quanteda.textstats can calculate a readability score but doesn't turn it into a rule you can run on CI, and lintr et al only look at code. 
+Other packages exist which cover a subset of the problem. The [spelling](https://docs.ropensci.org/spelling/) package checks words but not prose, [quanteda.textstats](https://quanteda.io/) can calculate a readability score but doesn't turn it into a rule you can run on CI, and the linters mentioned earlier only look at code. 
 
 The ecosystem lacks an opinionated documentation linting package that can be used by both humans and AI tools to write better docs.
