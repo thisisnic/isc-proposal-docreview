@@ -17,6 +17,16 @@ section.
 Include concrete actions you will take and estimated timeline.
 -->
 
+This proposal outlines a documentation linting tool in the form of a Rust binary which can be run on the command line and on CI, following the model of air and jarl. 
+
+It provides instant feedback on documentation quality, enabling both humans and AI tools to produce better quality documentation that will be clear and easy to understand for end users.
+
+The tool lints key user-facing package documentation: Roxygen headers, package vignettes, package READMEs and error/warning messages.
+
+The applied rules are configurable by the end user, according to taste, with the defaults reflecting established advice on writing for users, drawing on the tidyverse style guide, rOpenSci dev guide, and conventions built into existing linters such as Vale.
+
+The project will deliver the linter, a GitHub Action and the first set of rules between December 2026 and March 2027, with later milestones adding a pre-commit hook, AGENTS.md support and a thin R wrapper package.
+
 ## Detail
 <!--
 Go into more detail about the specifics of the project and how it delivers
