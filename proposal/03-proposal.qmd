@@ -53,6 +53,12 @@ The tool will be written in Rust, and will have 3 main components:
 What assumptions are you making that, if proven false, would invalidate the project?
 -->
 
+Assumptions and ideas for mitigation are as follows:
+
+- air's R parser can be used as a library, as jarl already does. If this changes, tree-sitter-r is the fallback.
+- Useful prose rules don't need heavy NLP. Sentence splitting and word lists are enough for the rules in scope, as Vale shows. Defaults will be tested on real packages before release so that they aren't noisy.
+- Building on air's parser and jarl's design keeps the amount of novel Rust small. The parser layer is the first milestone, so that this is proven before the rule work starts.
+
 ### External dependencies
 
 <!--
