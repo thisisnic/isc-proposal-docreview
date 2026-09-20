@@ -64,3 +64,10 @@ Assumptions and ideas for mitigation are as follows:
 <!--
 What external dependencies does the project have (e.g. libraries, services, other projects, etc.)?
 -->
+
+- air's R parser crates, pinned to a specific revision as jarl does.
+- A Rust Markdown parser such as pulldown-cmark.
+- jarl, not as a code dependency but as the design reference.
+- GitHub Actions for CI and releases.
+
+Nothing requires a service or a paid account, so there are no ongoing costs.
