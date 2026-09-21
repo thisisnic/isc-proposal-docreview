@@ -11,7 +11,7 @@ While `R CMD check` verifies that documentation exists and matches usage, there 
 
 Complex and confusing documentation increases cognitive load [@sweller1988], frustrates users, and can be a real barrier to adoption and understanding. 
 This problem affects everyone but can be a bigger challenge for newcomers and people for whom English is not their first language. 
-Better documentation means wider adoption of tools, and faster onboarding of newcomers. This problem is recognised by organisations like rOpenSci, who incorporate documentation checking as part of their software review process [@ropensci2026].
+Better documentation means wider adoption of tools, and faster onboarding of newcomers. This problem is recognised by organisations like rOpenSci, whose software review process asks reviewers to judge whether documentation is clear and sufficient [@ropensci2026].
 
 R packages are increasingly being written with the help of, or exclusively by, AI tools. 
 While many AI models are capable of writing accurate documentation, they vary in their ability to write understandable and helpful documentation.
